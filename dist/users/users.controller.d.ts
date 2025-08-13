@@ -5,18 +5,8 @@ export declare class UsersController {
     create(userData: any): Promise<{
         message: string;
     }>;
-    findAll(): Promise<{
-        id: number;
-        name: string;
-        email: string;
-        age: number;
-    }[]>;
-    findOne(id: string): Promise<{
-        id: number;
-        name: string;
-        email: string;
-        age: number;
-    }>;
+    findAll(): Promise<any[]>;
+    findOne(id: string): Promise<any>;
     update(id: string, userData: any): Promise<{
         message: string;
     }>;

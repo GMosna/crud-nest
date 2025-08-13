@@ -1,17 +1,7 @@
 export declare class UsersService {
     private users;
-    findAll(): Promise<{
-        id: number;
-        name: string;
-        email: string;
-        age: number;
-    }[]>;
-    findOne(id: number): Promise<{
-        id: number;
-        name: string;
-        email: string;
-        age: number;
-    }>;
+    findAll(): Promise<any[]>;
+    findOne(id: number): Promise<any>;
     create(userData: any): Promise<{
         message: string;
     }>;

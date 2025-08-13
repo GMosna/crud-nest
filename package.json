@@ -5,15 +5,11 @@
   "main": "dist/main.js",
   "scripts": {
     "build": "nest build",
-    "format": "prettier --write \"src/**/*.ts\"",
     "start": "nest start",
     "start:dev": "nest start --watch",
-    "start:debug": "nest start --debug --watch",
     "start:prod": "node dist/main",
-    "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
     "build:frontend": "cd frontend && npm run build",
-    "serve": "npm run build:frontend && npm run start:prod",
-    "dev:full": "npm run build:frontend && npm run start:dev"
+    "serve": "npm run build:frontend && npm run start:prod"
   },
   "dependencies": {
     "@nestjs/common": "^10.0.0",
@@ -21,7 +17,6 @@
     "@nestjs/platform-express": "^10.0.0",
     "@nestjs/serve-static": "^4.0.2",
     "@nestjs/typeorm": "^10.0.0",
-    "git": "^0.1.5",
     "mssql": "^10.0.1",
     "reflect-metadata": "^0.1.13",
     "rxjs": "^7.8.1",

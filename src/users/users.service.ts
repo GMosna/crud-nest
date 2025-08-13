@@ -2,10 +2,7 @@ import { Injectable } from '@nestjs/common';
 
 @Injectable()
 export class UsersService {
-  private users = [
-    { id: 1, name: 'João', email: 'joao@email.com', age: 25 },
-    { id: 2, name: 'Maria', email: 'maria@email.com', age: 30 }
-  ];
+  private users = [];
 
   async findAll() {
     return this.users;

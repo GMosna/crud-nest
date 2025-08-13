@@ -3,7 +3,6 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { ServeStaticModule } from '@nestjs/serve-static';
 import { join } from 'path';
 import { UsersModule } from './users/users.module';
-import { AppController } from './app.controller';
 
 @Module({
   imports: [
@@ -28,6 +27,5 @@ import { AppController } from './app.controller';
     }),
     UsersModule,
   ],
-  controllers: [AppController],
 })
 export class AppModule {}
