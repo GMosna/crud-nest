@@ -1,13 +1,12 @@
 {
   "name": "crud-sql-backend",
   "version": "1.0.0",
-  "description": "CRUD simples com NestJS e SQL Server",
-  "main": "dist/main.js",
+  "main": "backend/main.js",
   "scripts": {
     "build": "nest build",
     "start": "nest start",
     "start:dev": "nest start --watch",
-    "start:prod": "node dist/main",
+    "start:prod": "node backend/main",
     "build:frontend": "cd frontend && npm run build",
     "serve": "npm run build:frontend && npm run start:prod"
   },

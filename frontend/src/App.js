@@ -12,7 +12,7 @@ function App() {
   }, []);
 
   function buscarUsuarios() {
-    fetch('/api/users')
+    fetch('http://localhost:3001/api/users')
       .then(response => response.json())
       .then(data => setUsers(data))
       .catch(error => console.log('Erro:', error));
@@ -21,21 +21,23 @@ function App() {
   function adicionarUsuario() {
     const novoUsuario = { name, email, age: parseInt(age) };
 
-    fetch('/api/users', {
+    fetch('http://localhost:3001/api/users', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(novoUsuario)
     })
     .then(() => {
       alert('Usuário adicionado!');
-      setName(''); setEmail(''); setAge('');
+      setName(''); 
+      setEmail(''); 
+      setAge('');
       buscarUsuarios();
     })
     .catch(error => console.log('Erro:', error));
   }
 
   function deletarUsuario(id) {
-    fetch(`/api/users/${id}`, { method: 'DELETE' })
+    fetch(`http://localhost:3001/api/users/${id}`, { method: 'DELETE' })
     .then(() => {
       alert('Usuário deletado!');
       buscarUsuarios();
